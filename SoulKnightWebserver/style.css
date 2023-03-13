@@ -1,0 +1,295 @@
+html, body{
+  text-shadow:2px 2px 3px rgba(0,0,0,0.9);
+  background-color:#2E3047;
+  color:rgba(255,255,255,0.8);
+  margin:0;
+  width: 100%;
+  letter-spacing:1.5px;
+  font-family: 'Didact Gothic', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color:rgba(255,255,255,0.8);
+}
+
+.container{
+  display:flex;
+}
+
+.center{
+  align-items: center;
+  justify-content: center;
+}
+
+.flexDirC{
+  flex-direction: column;
+}
+
+.inline{
+  display:inline;
+}
+
+/* nav bar */
+nav{
+  align-items:center;
+  z-index:2;
+  top:0;
+  left:0;
+  position:sticky;
+  background-color: rgba(0,0,0,0.6);
+  align-self: flex-start;
+}
+
+
+
+nav *{
+  color:rgba(255,255,255,0.8);
+  padding:5px;
+  margin:0;
+}
+
+#navL{
+  flex:2;
+  min-width:max-content;
+}
+
+#navL h1{
+  transition:0.3s;
+  color:#3BBA9C;
+  display:inline;
+}
+
+#navL h1:hover{
+  transition:0.3s;
+  letter-spacing:3px;
+}
+
+#navR{
+  flex:5;
+  padding-right:10px;
+}
+
+#navR > a{
+  transition:0.3s;
+  flex:1;
+  text-align: right;
+}
+
+#navR > a:hover{
+  transition:0.3s;
+  letter-spacing:4px;
+}
+
+/* main */
+#main{
+  height:100vh;
+  background:linear-gradient(90deg,rgba(41, 255, 130, 0.5),rgba(41, 112, 255,0.5)), url("SKMedia/main/bk.jpg");
+  box-shadow:inset 0px 0px 70px 60px rgba(0, 0, 0, 0.3);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  filter: saturate(110%);
+}
+
+#mainL{
+  flex:4;
+}
+
+#mainL > div{
+  flex:1;
+  border-radius:5px 25px;
+  min-width: 65%;
+  min-height: 70%;
+  max-width: 65%;
+  max-height: 70%;
+  border:3px solid rgba(0,0,0,0.6);
+}
+
+#mainL img{
+  border-radius:5px 25px;
+  border:3px solid #3BBA9C;
+  object-fit:cover;
+  overflow:hidden;
+  flex:1;
+}
+
+#mainR{
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align:center;
+  flex:5;
+}
+
+#mainR > hr{
+  min-width:70%;
+}
+
+.titleR{
+  color:#2da3f7;
+}
+
+#genInfo{
+  padding:40px;
+  height:80vh;
+}
+
+.heading{
+  color:#3BBA9C;
+  padding:6px 35px;
+  background-color: rgba(0,0,0,0.6);
+  border-top:2px solid rgba(255,255,255,0.6);
+  border-bottom:2px solid rgba(255,255,255,0.6);
+}
+
+#genInfo > div{
+  flex:1;
+}
+
+#logoDiv{
+  border-radius:15px;
+  border:3px solid #3BBA9C;
+  width:60%;
+  height:60%;
+}
+
+#logoDiv > img{
+  border-radius:15px;
+  flex:1;
+  width:100%;
+  height:100%;
+}
+
+#genInfo p{
+  width:75%;
+  font-size:20px;
+  text-align:center;
+  letter-spacing:1.5px;
+  line-height:35px;
+}
+
+#sectionsDiv{
+  background-color:rgba(255,255,255,0.1);
+  height:80vh;
+  padding:35px;
+}
+
+#sectionsDiv a{
+  display:inline-block;
+  text-align:center;
+  border-radius:5px;
+  margin:15px;
+}
+
+#sectionsDiv img{
+  border:3px solid #3BBA9C;
+  object-fit:cover;
+  overflow:hidden;
+  border-radius:5px;
+  width:100%;
+  height:100%;
+}
+
+.fadeCard{
+  position:relative;
+}
+
+#sectionsDiv a, .fadeCard, .frontCard, .backCard{
+  width:250px;
+  height:250px;
+}
+
+.frontCard, .backCard{
+  transition:0.3s;
+  letter-spacing:2px;
+  position:absolute;
+}
+
+.backCard > h1{
+  font-size:20px;
+  margin:0px;
+}
+
+.backCard > h3{
+  padding-left:40px;
+  padding-right:40px;
+  font-size:12px;
+  letter-spacing: 4px;
+}
+
+.backCard{
+  border-radius:5px;
+  border:3px solid #3BBA9C;
+  filter:opacity(0);
+}
+
+.backCard:hover{
+  filter: opacity(100);
+  background-color:rgba(0,0,0,0.75);
+}
+
+
+#filters{
+  background-color: rgba(0,0,0,0.2);
+}
+
+#filtersTitle{
+  text-align:center; 
+  max-width:15%; 
+  margin-left:auto; 
+  margin-right:auto;
+}
+
+#listDiv h3{
+  width:150px;
+}
+
+#listDiv input{
+  width:220px;
+}
+
+.selectdiv h3{
+  font-size:16px;
+  border-radius:4px;
+  background-color:rgba(255,255,255,0.55);
+  background-image: linear-gradient(45deg, rgba(255, 87, 72, 0.6), rgba(0, 3, 190, 0.6));
+  padding:8px 35px;
+  width:45px;
+  text-align:center;
+  cursor:pointer;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  letter-spacing:1.5px;
+  box-shadow:2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.selectdiv{
+  margin:auto 10px;
+  position:relative;
+  display:inline-block;
+}
+
+.selections{
+  position:absolute;
+  display:none;
+  z-index:1;
+  font-size:12px;
+  box-shadow:2px 2px 6px rgba(0,0,0,0.8);
+}
+
+.selections input{
+  display:block;
+  letter-spacing:1.5px;
+  width:115px;
+  padding:8px 35px;
+  text-decoration: none;
+  font-style:italic;
+}
+
+.selectdiv:hover .selections{
+  display:block;
+}
+
+.selections input:hover{
+  cursor:pointer;
+  background-image: linear-gradient(45deg, rgba(192, 36, 36, 0.8), rgba(255, 123, 0, 0.8));
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title> SoulKnight Heroes </title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="/pages/heroes/heroes.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/pages/heroes/heroes.js"></script>
+</head>
+
+<body onload="init()">
+
+  <!--
+  
+  <div class="modalBK container center">
+    <div class="modal">
+      <div class="modalTop">
+        <span class="closeButton">&times;</span>
+      </div>
+      <div class="modalContent">
+        <p> BLAH BLAH BLAH </p>
+      </div>
+    </div>
+  </div>
+  
+  -->
+  
+  <nav class="container center">
+    <div id="navL">
+      <img src="">
+      <div class="inline">
+        <a href="index.html"> 
+        <h1 class="inline"> SOULKNIGHT</h1><h1 class="inline">GUIDE </h1> </a>
+      </div>
+    </div>
+    <div id="navR" class="container">
+      <a href="heroes.html"> <h4> HEROES </h4> </a>
+      <a href="skills.html"> <h4> SKILLS </h4> </a>
+      <a href="weapons.html"> <h4> WEAPONS </h4> </a>
+    </div>
+  </nav>
+  
+  <div id="main" class="container">
+    <div id="mainL" class="container center">
+      <div class="container">
+        <img src="SKMedia/main/heroeslogo.png">
+      </div>
+    </div>
+    <div id="mainR" class="container flexDirC center">
+      <div>
+        <h1 class="inline"> HEROES </h1>
+      </div>
+      <hr>
+      <h3> BASIC INFORMATION OF ALL PLAYABLE HEROES </h3>
+    </div>
+  </div>
+
+  <div id="genInfo" class="container flexDirC center">
+    <h2 class="heading"> HERO LIST </h2>
+    <div id="logoDiv" class="container center">
+      <p style="padding:20px;"> Listed below are the names of the different playable heroes as well as basic info, such as Name, HP, Def, MP, and starting weapon. Additional videos are provided. <br> </br> Sample card on the right. </p>
+      
+      <div onClick="modal(this)" class="flipCard center">
+        <div class="flipCardPos">
+          <div class="flipCardFront"> 
+            <img src="SKMedia/main/SKLogo.png">
+          </div>
+          <div class="flipCardBack center container flexDirC"> 
+            <h2> HERO NAME </h2>
+            <hr>
+            <p> Description HERE </p>
+            <hr class="flipCardHr">
+            <h4> HP: MinHP (MaxHP) </h4>
+            <h4> DEF: MinDef (MaxDEF) </h4>
+            <h4> MP/Energy: MinMP (MaxMP) </h4>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+
+
+  <h2 id="filtersTitle" class="heading"> FILTERS: </h2>
+  <div id="filters" class="container center">
+    <div class="selectdiv">
+      <h3 onclick="buildCards()"> ALL </h3>
+    </div>
+    
+    <div data-key="InitHP" class="selectdiv">
+      <h3> INIT HP </h3>
+      <div id="release" class="selections">
+        <input type="button"  data-condition1="4" value="< 4" onclick="selectCategory(this)">
+        <input type="button" data-condition1="4" data-condition2="6" value="4 ~ 6" onclick="selectCategory(this)">
+        <input type="button" value="6" onclick="selectCategory(this)">
+      </div>
+    </div>
+  
+    <div data-key="MaxHP" class="selectdiv">
+      <h3> MAX HP </h3>
+      <div id="release" class="selections">
+        <input type="button" data-condition1="4" value="< 4" onclick="selectCategory(this)">
+        <input type="button" data-condition1="4" data-condition2="6" value="4 ~ 6" onclick="selectCategory(this)">
+        <input type="button" data-condition1="6" value="> 6" onclick="selectCategory(this)">
+      </div>
+    </div>
+
+    <div data-key="InitMana" class="selectdiv">
+      <h3> INIT MANA </h3>
+      <div id="release" class="selections">
+        <input type="button" data-condition1="180" value="< 180" onclick="selectCategory(this)">
+        <input type="button" data-condition1="180" data-condition2="180" value="= 180" onclick="selectCategory(this)">
+        <input type="button" data-condition1="180" value="> 180" onclick="selectCategory(this)">
+      </div>
+    </div>
+
+    <div data-key="MaxMana" class="selectdiv">
+      <h3> MAX MANA </h3>
+      <div id="release" class="selections">
+        <input type="button" data-condition1="200" value="< 200" onclick="selectCategory(this)">
+        <input type="button" data-condition1="200" data-condition2="200" value="= 200" onclick="selectCategory(this)">
+        <input type="button" data-condition1="200" value="> 200" onclick="selectCategory(this)">
+      </div>
+    </div>
+
+    <div data-key="InitDef" class="selectdiv">
+      <h3> INIT DEF </h3>
+      <div id="release" class="selections">
+        <input type="button" data-condition1="4" value="< 4" onclick="selectCategory(this)">
+        <input type="button" data-condition1="4" data-condition2="5" value="4 ~ 5" onclick="selectCategory(this)">
+        <input type="button" data-condition1="5" value="> 5" onclick="selectCategory(this)">
+      </div>
+    </div>
+
+    <div data-key="MaxDef" class="selectdiv">
+      <h3> MAX DEF </h3>
+      <div id="release" class="selections">
+        <input type="button" data-condition1="4" value="< 4" onclick="selectCategory(this)">
+        <input type="button" data-condition1="4" data-condition2="5" value="4 ~ 5" onclick="selectCategory(this)">
+        <input type="button" data-condition1="5" value="> 5" onclick="selectCategory(this)">
+      </div>
+    </div>
+  
+  </div>
+  
+  <div id="listDiv" class="container center">
+    <div>
+
+        <input id="nameSearch" type="text" placeholder="Enter Hero Name..."></input>
+        <input onclick="searchHero()" type="button" value="SEARCH"></input>
+      
+      <div class="selectdiv">
+        <h3> LAYOUT </h3>
+        <div id="release" class="selections">
+          <input type="button" value="FLIP CARDS" onclick="selectCategory(this)">
+          <input type="button" value="LIST" onclick="selectCategory(this)">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  
+  <h4 id="searchCount"> 17 RESULTS FOUND </h4>
+
+  <div id="cardsDiv">
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+#main{
+  height:100vh;
+  background:linear-gradient(90deg,rgba(255, 101, 36, 0.5),rgba(36, 72, 255,0.5)), url("/SKMedia/main/skillsbk.jpg");;
+  box-shadow:inset 0px 0px 70px 60px rgba(0, 0, 0, 0.3);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  filter: saturate(110%);
+}
+
+#skillsList{
+  background-color:rgba(0,0,0,0.2);
+  padding:20px;
+  margin-left:auto;
+}
+
+.content > div{
+  flex:1;
+}
+
+.rowsDiv{
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:15px;
+  border-radius:3px;
+  padding:20px 30px;
+  width:80%;
+  background-image:linear-gradient(45deg, rgba(19, 145, 107, 0.8), rgba(98, 50, 209, 0.8));
+  
+}
+
+.content h2{
+  text-align: center;
+  width:max-content;
+}
+
+.row{
+  overflow-x: auto;
+  padding-top:5px;
+  padding-bottom:5px;
+  background-color:rgba(0,0,0,0.4);
+  margin:0;
+  border:3px solid rgba(0, 0, 0, 0.1);
+  border-radius:3px;
+}
+
+.row:hover{
+  cursor: pointer;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.row > div{
+  height:max-content;
+  padding:5px 40px;
+  flex:1;
+  display: flex;
+}
+
+.row h2{
+  min-height:100%;
+  display:inline;
+  font-size:15px;
+  letter-spacing:1.5px;
+}
+
+.row img{
+  margin-right:10px;
+  width: 45px;
+  height: 45px;
+}
+
+.content{
+  display:none;
+  border-radius:3px;
+  text-align: center;
+  background-color:rgba(0,0,0,0.2);
+}
+
+
+.content > div{
+  border: 3px solid rgba(0,0,0,0.4);
+  padding:20px;
+}
+
+.content p{
+  font-size:14px;
+}
+
+.subtitle{
+  font-size:18px;
+  letter-spacing:5px;
+  background-color:rgba(0,0,0,0.3);
+  padding-top:10px;
+  padding-bottom:10px;
+  border-radius:3px;
+  border:2px solid rgba(0,0,0,0.5);
+}
+
+#searchCount{
+  margin-left:60px;
+  letter-spacing:3px;
+}
+
+.heroImgDiv1{
+  width:250px;
+}
+
+.heroImgDiv{
+  height:250px;
+  border-radius:3px;
+  border: 2px solid rgba(0,0,0,0.6);
+  padding:5px;
+  background-color:rgba(0,0,0,0.5);
+  display: flex;
+  justify-content:center;
+  object-fit:cover;
+  overflow:hidden;
+}
+
+
+.content img{
+  height:100%;
+  border-radius:3px;
+}
+
+#categoryFilter h3{
+  width: max-content;
+}
+
+#categoryFilter input{
+  width:228px;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="/pages/heroes/heroes.css" rel="stylesheet" type="text/css" />
+  <link href="/pages/weapons/weapons.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/pages/weapons/weapons.js"></script>
+</head>
+
+<body onload="init()">
+  
+  <nav class="container center">
+    <div id="navL">
+      <img src="">
+      <div class="inline">
+        <a href="index.html"> 
+        <h1 class="inline"> SOULKNIGHT</h1><h1 class="inline">GUIDE </h1> </a>
+      </div>
+    </div>
+    <div id="navR" class="container">
+      <a href="heroes.html"> <h4> HEROES </h4> </a>
+      <a href="skills.html"> <h4> SKILLS </h4> </a>
+      <a href="weapons.html"> <h4> WEAPONS </h4> </a>
+    </div>
+  </nav>
+  
+  <div id="main" class="container">
+    <div id="mainL" class="container center">
+      <div class="container">
+        <img src="SKMedia/main/weaponslogo.jpg">
+      </div>
+    </div>
+    <div id="mainR" class="container flexDirC center">
+      <div>
+        <h1 class="inline"> WEAPONS </h1>
+      </div>
+      <hr>
+      <h3> AN EXHIBIT WITH INNUMERABLE WEAPONS FROM SOUL KNIGHT </h3>
+    </div>
+  </div>
+
+  <div id="genInfo" class="container flexDirC center">
+    <h2 class="heading"> WEAPONS LIST </h2>
+    <div id="logoDiv" class="container center">
+      <p style="padding:20px;"> Below are 35 weapons and its stats (Name, Rarity, Min/Max Attack, Energy Cost, Min/Max Crit, Inaccuracy) and weapon types. <br> </br> Sample card on the right. </p>
+      
+      <div class="flipCard center">
+        <div class="flipCardPos">
+          <div class="flipCardFront"> 
+            <img src="SKMedia/main/SKLogo.png">
+          </div>
+          <div class="flipCardBack center container flexDirC"> 
+            <h2> WEAPON NAME </h2>
+            <hr>
+            <img src="SKMedia/main/SKLogo.png"> <p> WEAPON TYPE </p>
+            <hr class="flipCardHr">
+            <h4> ATTACK: MinAtk - MaxAtk </h4>
+            <h4> ENERGY COST: # </h4>
+            <h4> CRIT: MinCrit - MaxCrit </h4>
+            <h4> INACCURACY: # </h4>
+          </div>
+        </div>  
+      </div>
+      
+    </div>
+  </div>
+
+
+ <h2 id="filtersTitle" class="heading"> FILTERS: </h2>
+  <div id="filters" class="container center">
+    <div class="selectdiv">
+      <h3 onclick="buildCards()"> ALL </h3>
+    </div>
+    
+    <div id="categoryFilter" class="selectdiv">
+      <h3 data-key="Rarity"> RARITY </h3>
+      <div id="rarity" class="selections">
+        <input type="button" value="Common" onclick="selectCategory(this)">
+        <input type="button" value="Uncommon" onclick="selectCategory(this)">
+        <input type="button" value="Rare" onclick="selectCategory(this)">
+        <input type="button" value="Very Rare" onclick="selectCategory(this)">
+        <input type="button" value="Epic" onclick="selectCategory(this)">
+        <input type="button" value="Legendary" onclick="selectCategory(this)">
+      </div>
+    </div>
+
+    <div id="categoryFilter" class="selectdiv">
+      <h3 data-key="Type"> WEAPON TYPE </h3>
+      <div id="type" class="selections">
+        <input type="button" value=" Bow " onclick="selectCategory(this)">
+        <input type="button" value=" Handgun " onclick="selectCategory(this)">
+        <input type="button" value=" Laser Gun " onclick="selectCategory(this)">
+        <input type="button" value=" Melee " onclick="selectCategory(this)">
+        <input type="button" value=" Misc " onclick="selectCategory(this)">
+        <input type="button" value=" Rifle " onclick="selectCategory(this)">
+        <input type="button" value=" Shotgun " onclick="selectCategory(this)">
+        <input type="button" value=" Staff " onclick="selectCategory(this)">
+        <input type="button" value=" Throwing " onclick="selectCategory(this)">
+      </div>
+      
+    </div>
+  </div>
+  
+  <h4 id="searchCount"> 35 RESULTS FOUND </h4>
+
+  <div id="cardsDiv">
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

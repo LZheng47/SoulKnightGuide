@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="/pages/skills/skills.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/pages/skills/skills.js"> </script>
+</head>
+
+<body onload="init()">
+  
+  <nav class="container center">
+    <div id="navL">
+      <img src="">
+      <div class="inline">
+        <a href="index.html"> 
+        <h1 class="inline"> SOULKNIGHT</h1><h1 class="inline">GUIDE </h1> </a>
+      </div>
+    </div>
+    <div id="navR" class="container">
+      <a href="heroes.html"> <h4> HEROES </h4> </a>
+      <a href="skills.html"> <h4> SKILLS </h4> </a>
+      <a href="weapons.html"> <h4> WEAPONS </h4> </a>
+    </div>
+  </nav>
+  
+  <div id="main" class="container">
+    <div id="mainL" class="container center">
+      <div class="container">
+        <img src="SKMedia/main/skillslogo.png">
+      </div>
+    </div>
+    <div id="mainR" class="container flexDirC center">
+      <div>
+        <h1 class="inline"> SKILLS </h1>
+      </div>
+      <hr>
+      <h3> A SHOWCASE OF ALL HERO PASSIVE AND ACTIVE SKILLS </h3>
+    </div>
+  </div>
+
+  <div id="genInfo" class="container flexDirC center">
+    <h2 class="heading"> SKILL LIST </h2>
+    <div id="logoDiv" class="container center">
+      <p style="padding:20px;"> Essential information about the active and passive skills for each hero, such as its name, description, and image, are shown below. </p>
+      
+    </div>
+  </div>
+
+
+  <h2 id="filtersTitle" class="heading"> FILTERS: </h2>
+  <div id="filters" class="container center">
+    <div class="selectdiv">
+      <h3 onclick="buildCards()"> ALL </h3>
+    </div>
+    
+    <div id="categoryFilter" class="selectdiv">
+      <h3> PASSIVE CATEGORY </h3>
+      <div id="release" class="selections">
+        <input type="button" value="Character Enhancement" onclick="selectCategory(this)">
+        <input type="button" value="Weapon Enhancement" onclick="selectCategory(this)">
+        <input type="button" value="Immunity" onclick="selectCategory(this)">
+        <input type="button" value="Miscellaneous" onclick="selectCategory(this)">
+      </div>
+    </div>
+  </div>
+  
+  <div id="listDiv" class="container center">
+    <div>
+      <input id="nameSearch" type="text" placeholder="Enter Hero Name..."></input>
+      <input id="skillSearch" type="text" placeholder="Enter Skill Name..."></input>
+      <input onclick="searchHero()" type="button" value="SEARCH"></input>
+    </div>
+  </div>
+  
+  <h4 id="searchCount"> 17 RESULTS FOUND </h4>
+
+  <div id="skillsList">
+    
+    <div class="rowsDiv">
+      <div onclick="collapse(this)" class="row container">
+        <div>
+          <img src="SKMedia/main/SKLogo.png">
+          <h2> HERO NAME </h2>
+        </div>
+
+        <div>
+          <img src="SKMedia/main/SKLogo.png">
+          <h2> ACTIVE SKILL NAME </h2>
+        </div>
+
+        <div>
+          <img src="SKMedia/main/SKLogo.png">
+          <h2> CATEGORY </h2>
+        </div>        
+      </div>
+
+      <div class="content container">
+        <div class="container center flexDirC"> 
+          <img src="SKMedia/main/SKLogo.png">
+          <h2 class="heading"> HERO NAME </h2>
+        </div>
+        
+        <div> 
+          <h3 class="subtitle"> ACTIVE </h3>
+          <img src="SKMedia/main/SKLogo.png">
+          <h4> NAME OF ACTIVE </h4>
+          <p> DESCRIPTION OF ACTIVE <br> <br> COOLDOWN: (COOLDOWN HERE)</p>
+        </div>
+        
+        <div> 
+          <h3 class="subtitle"> PASSIVE </h3>
+          <img src="SKMedia/main/SKLogo.png">
+          <h4> CATEGORY: ____ </h4>
+          <p> PASSIVE DESCRIPTION </p>
+        </div>
+        
+      </div>  
+    </div>
+    
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+
+</html>

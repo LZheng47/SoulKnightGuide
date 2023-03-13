@@ -1,0 +1,21 @@
+#main{
+  height:100vh;
+  background:linear-gradient(90deg,rgba(242, 225, 36, 0.5),rgba(242, 36, 197,0.5)), url("/SKMedia/main/weaponsbk.jpg");;
+  box-shadow:inset 0px 0px 70px 60px rgba(0, 0, 0, 0.3);
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  filter: saturate(110%);
+}
+
+.selectdiv > h3{
+  width: max-content;
+}
+
+#rarity input{
+  width: 128px;
+}
+
+#type input{
+  width:184px;
+}
